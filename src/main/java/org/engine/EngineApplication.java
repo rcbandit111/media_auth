@@ -5,6 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration;
 import org.springframework.boot.autoconfigure.web.ServerProperties;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -14,7 +15,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2WebMvc;
 
 @EnableConfigurationProperties(KeycloakServerProperties.class)
 @EnableSwagger2WebMvc
-@SpringBootApplication(scanBasePackages = { "org.engine.*", "org.engine.production.service", "org.engine.warehouse.service" })
+@SpringBootApplication(scanBasePackages = { "org.engine.*", "org.engine.production.service", "org.engine.warehouse.service" }, exclude = LiquibaseAutoConfiguration.class)
 public class EngineApplication {
 
     private static final Logger LOG = LoggerFactory.getLogger(EngineApplication.class);

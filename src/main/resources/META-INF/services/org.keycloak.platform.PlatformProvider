@@ -1,1 +1,1 @@
-com.baeldung.jwt.config.SimplePlatformProvider
+org.engine.config.SimplePlatformProvider

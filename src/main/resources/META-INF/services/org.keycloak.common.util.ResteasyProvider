@@ -1,1 +1,1 @@
-com.baeldung.jwt.config.Resteasy3Provider
+org.engine.config.Resteasy3Provider
